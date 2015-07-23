@@ -1,0 +1,77 @@
+
+
+html, body{
+	width:100%;
+}
+
+body{
+background: #FCFCFC;
+font: 14px Arial, sans-serif;
+color:#5C7171;
+}
+
+}
+
+
+#control{
+	width: 700px;
+
+}
+
+#message{
+	width:600px;
+	height:180px;
+	margin:20px 0 20px 20px;
+	border-radius: 0 0 10px 10px;
+	--webkit-box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+	-moz-box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+	box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+
+	background:#E4FCFC;
+
+}
+
+#userName{
+	width:485px;
+	height:30px;
+	margin:20px 0 0 10px; 
+	background: #E4FCFC;
+	border-radius: 10px 10px  0 0 ;
+	-webkit-box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+	-moz-box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+	box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+
+}
+
+#chat li{
+	list-style: none;
+	margin-bottom:10px;
+	border-bottom: 1px solid #B5C1C1;
+	width:600px;
+}
+
+#chat {
+	margin-left: 20px;
+	margin-top: 20px;
+	height:250px;
+	width:600px;
+	overflow-y: scroll;
+	overflow-x:auto; 
+	background: #E4FCFC;
+	border:1px solid #B5C1C1;
+	border-radius: 10px 10px  10px 10px ;
+	-webkit-box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+	-moz-box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+	box-shadow: 5px 5px 9px 0px rgba(179,187,181,1);
+}
+
+#control label{
+	margin-left: 20px;
+}
+
+#submitButton{
+	color:#5C7171;
+	height:30px;
+	width:150px;
+	margin-left: 20px;
+}

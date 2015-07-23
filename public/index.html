@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Chat(webtransports)</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+	</head>
+	
+	<body>
+		<div id="control">
+			<label>Type your name :<input type="text" id="userName"></label><br>
+			<textarea id="message" cols="38"></textarea><br>
+			<input type="button" value="Send Message" id="submitButton">
+		</div>
+		<div id="chat">
+			
+		</div>
+		<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			
+		$(document).ready( function () {
+			var submitButton = $('#submitButton'),
+				userName = $('#userName'),  
+				message = $('#message'),
+				chat = $('#chat'),
+				socket = io.connect();
+			submitButton.on("click", function (e) {
+				var usName = userName.val() || "User";
+				var data = {
+					name: usName,
+					message : message.val()
+				}
+				message.val('');
+				socket.emit('chat message',data);
+			});
+			socket.on('chat history', function (data){
+				for (var item in data) {
+					chat.append($('<li>').html(data.name  + ": " + data.message));	
+				}
+			});
+			socket.on('chat message', function (data) {
+				chat.append($('<li>').html(data.name + ": " + data.message));	
+			})
+		})	
+		</script>
+	</body>
+</html>
